@@ -164,7 +164,24 @@ pie
     "Validation" : 10
 ```
 
+## 🧪 How to Run Locally
 
+```bash
+# Clone the repo
+git clone https://github.com/yourname/FinBankDMO.git
+
+# Open in Visual Studio or VS Code
+
+# Configure your appsettings.json:
+- ConnectionStrings
+- EmailSettings (SMTP, App Password)
+- Encryption (Key, IV)
+
+# Apply migrations and update DB
+dotnet ef database update
+
+# Run the API
+dotnet run
 
 
 

@@ -92,7 +92,6 @@ graph TD
     J -->|Other| B
   ```  
 ###💾 Caching Mechanism
-
 ```mermaid
 flowchart LR
     A[Incoming Request] --> B{GET Request?}
@@ -103,10 +102,8 @@ flowchart LR
     F --> G[Cache Response]
     G --> H[Return Fresh Data]
     B -->|No| I[Process Normally]
-
-###📊 Performance Metrics
 ```
-
+###📊 Performance Metrics
 ```mermaid
 pie
     title Request Handling Time Distribution

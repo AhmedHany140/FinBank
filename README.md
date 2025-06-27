@@ -41,7 +41,58 @@
 
 ---
 
+# 🏦 FinBankDMO Digital Banking UI/UX Flow
+```mermaid
+flowchart TD
+    A[🌐 Login Page] -->|Login| B[🔐 OTP Verification]
+    B --> C[🏠 Dashboard]
 
+    %% Account Management
+    subgraph "Account Management"
+        C --> D[💳 Create New Account]
+        D --> E[🔢 Enter Details]
+        E --> F[🔐 Encrypt with AES-256]
+    end
+
+    %% Transactions
+    subgraph "Transactions"
+        C --> G[🔄 Transfer Funds]
+        C --> H[💰 Deposit]
+        C --> I[💸 Withdraw]
+        G --> J[📧 Email Confirmation]
+    end
+
+    %% Interest Management
+    subgraph "Interest Management"
+        C --> K[📈 View Interest]
+        K --> L[🗓 Schedule Interest]
+        L --> M[🔄 Auto Update via Hangfire]
+    end
+
+    %% Settings
+    subgraph "Settings"
+        C --> N[⚙️ Profile Settings]
+        N --> O[✉️ Update Email]
+        N --> P[🔑 Change Password]
+    end
+
+    %% Colors
+    style A fill:#4CAF50,stroke:#388E3C,color:#fff
+    style B fill:#FFC107,stroke:#FFA000,color:#000
+    style C fill:#2196F3,stroke:#0D47A1,color:#fff
+    style D fill:#9C27B0,stroke:#7B1FA2,color:#fff
+    style G fill:#3F51B5,stroke:#303F9F,color:#fff
+    style K fill:#009688,stroke:#00796B,color:#fff
+
+    %% Legend
+    Z[🎨 Color Legend] --> Z1
+    subgraph Z1[ ]
+        direction LR
+        Z2[🟩 Green: Authentication]
+        Z3[🟦 Blue: Main Operations]
+        Z4[🟪 Purple: Account Management]
+    end
+```
 
 ## 🌐 System Workflow Visualization
 
@@ -113,28 +164,7 @@ pie
     "Validation" : 10
 ```
 
-    ## 🎨 FinBankDMO UI/UX Flow (Arabic Support)
 
-# 🏦 FinBankDMO Digital Banking UI/UX Flow
 
-## 🌟 Interactive User Journey
-
-```mermaid
-%%{init: {'theme':'neutral', 'themeVariables': { 'primaryColor': '#1a237e', 'edgeLabelBackground':'#fff'}}}%%
-journey
-    title User Flow with Emotional Engagement
-    section Authentication
-      Landing Page: 5: User(👤)
-      OTP Verification: 3: User(😕), System(📱)
-      Dashboard Load: 4: User(😊)
-    section Transactions
-      Initiate Transfer: 5: User(👆), System(💸)
-      Email Confirmation: 3: User(📧), System(🔄)
-      Success Notification: 4: User(😃), System(✅)
-    section Interest
-      View Earnings: 4: User(🧐), System(📊)
-      Auto-Apply: 5: System(🤖)
-      Notification: 3: User(😮), System(🔔)
-    
 
 

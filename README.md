@@ -115,51 +115,26 @@ pie
 
     ## 🎨 FinBankDMO UI/UX Flow (Arabic Support)
 
+# 🏦 FinBankDMO Digital Banking UI/UX Flow
+
+## 🌟 Interactive User Journey
+
 ```mermaid
-flowchart TD
-    A[🌐 صفحة الدخول] -->|تسجيل الدخول| B[🔐 التحقق بOTP]
-    B --> C[🏠 لوحة التحكم]
-    
-    subgraph "إدارة الحسابات (Accounts)"
-        C --> D[💳 إنشاء حساب جديد]
-        D --> E[🔢 إدخال التفاصيل]
-        E --> F[🔐 تشفير AES-256]
-    end
-    
-    subgraph "المعاملات (Transactions)"
-        C --> G[🔄 تحويل الأموال]
-        C --> H[💰 إيداع]
-        C --> I[💸 سحب]
-        G --> J[📧 تأكيد بالبريد]
-    end
-    
-    subgraph "الفوائد (Interest)"
-        C --> K[📈 عرض الفوائد]
-        K --> L[🗓 جدولة الفوائد]
-        L --> M[🔄 تحديث تلقائي]
-    end
-    
-    subgraph "الإعدادات (Settings)"
-        C --> N[⚙️ الملف الشخصي]
-        N --> O[✉️ تحديث الإيميل]
-        N --> P[🔑 تغيير كلمة السر]
-    end
-    
-    style A fill:#4CAF50,stroke:#388E3C
-    style B fill:#FFC107,stroke:#FFA000
-    style C fill:#2196F3,stroke:#0D47A1
-    style D fill:#9C27B0,stroke:#7B1FA2
-    style G fill:#3F51B5,stroke:#303F9F
-    style K fill:#009688,stroke:#00796B
-    
-    %% Legend
-    Z[🎨 ألوان الواجهة:] --> Z1
-    subgraph Z1[ ]
-        direction LR
-        Z2[أخضر: عمليات الدخول]
-        Z3[أزرق: العمليات الرئيسية]
-        Z4[بنفسجي: إدارة الحسابات]
-    end
+%%{init: {'theme':'neutral', 'themeVariables': { 'primaryColor': '#1a237e', 'edgeLabelBackground':'#fff'}}}%%
+journey
+    title User Flow with Emotional Engagement
+    section Authentication
+      Landing Page: 5: User(👤)
+      OTP Verification: 3: User(😕), System(📱)
+      Dashboard Load: 4: User(😊)
+    section Transactions
+      Initiate Transfer: 5: User(👆), System(💸)
+      Email Confirmation: 3: User(📧), System(🔄)
+      Success Notification: 4: User(😃), System(✅)
+    section Interest
+      View Earnings: 4: User(🧐), System(📊)
+      Auto-Apply: 5: System(🤖)
+      Notification: 3: User(😮), System(🔔)
     
 
 

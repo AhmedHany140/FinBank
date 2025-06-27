@@ -1,0 +1,182 @@
+2025-06-26 15:15:23.724 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 4) Logger initialized in Development environment
+2025-06-26 15:15:34.183 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 4) Logger initialized in Development environment
+2025-06-26 15:15:49.941 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 4) Logger initialized in Development environment
+2025-06-26 16:23:17.995 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 16:27:13.976 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 16:28:28.613 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 16:28:51.080 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 16:29:24.724 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 16:34:01.743 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 16:35:33.883 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 17:25:26.396 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 17:28:08.773 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 17:28:54.665 +03:00 [INF] (ReqId: 0HNDKNMMI9PDN:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 8) Processing RegisterCommand
+2025-06-26 17:28:54.677 +03:00 [INF] (ReqId: 0HNDKNMMI9PDN:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 8) Processing RegisterCommand
+2025-06-26 17:28:54.691 +03:00 [WRN] (ReqId: 0HNDKNMMI9PDN:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 8) Warning: User registration failed
+2025-06-26 17:29:15.313 +03:00 [INF] (ReqId: 0HNDKNMMI9PDN:00000009, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RegisterCommand
+2025-06-26 17:29:15.319 +03:00 [INF] (ReqId: 0HNDKNMMI9PDN:00000009, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RegisterCommand
+2025-06-26 17:29:17.654 +03:00 [ERR] (ReqId: 0HNDKNMMI9PDN:00000009, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Context: RequestType: RegisterCommand
+Exception Type: InvalidOperationException
+Message: The ConnectionString property has not been initialized.
+
+Stack Trace:    at Microsoft.Data.SqlClient.SqlConnection.PermissionDemand()
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByEmailAsync(String email)
+   at Microsoft.AspNetCore.Identity.UserValidator`1.ValidateEmail(UserManager`1 manager, TUser user, List`1 errors)
+   at Microsoft.AspNetCore.Identity.UserValidator`1.ValidateAsync(UserManager`1 manager, TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.ValidateUserAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user, String password)
+   at Registerhandeler.Handle(RegisterCommand request, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\AuthenticationMangement\Handelers\UserHandeler.cs:line 50
+   at Infrastructure.MediatR.Behavairs.ExeptionBehavairs.ExceptionHandlingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\Behavairs\ExeptionBehavairs\ExceptionHandlingBehavior.cs:line 29
+System.InvalidOperationException: The ConnectionString property has not been initialized.
+   at Microsoft.Data.SqlClient.SqlConnection.PermissionDemand()
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.PermissionDemand(DbConnection outerConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.InternalOpenAsync(CancellationToken cancellationToken)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByEmailAsync(String email)
+   at Microsoft.AspNetCore.Identity.UserValidator`1.ValidateEmail(UserManager`1 manager, TUser user, List`1 errors)
+   at Microsoft.AspNetCore.Identity.UserValidator`1.ValidateAsync(UserManager`1 manager, TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.ValidateUserAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user)
+   at Microsoft.AspNetCore.Identity.UserManager`1.CreateAsync(TUser user, String password)
+   at Registerhandeler.Handle(RegisterCommand request, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\AuthenticationMangement\Handelers\UserHandeler.cs:line 50
+   at Infrastructure.MediatR.Behavairs.ExeptionBehavairs.ExceptionHandlingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\Behavairs\ExeptionBehavairs\ExceptionHandlingBehavior.cs:line 29
+2025-06-26 17:30:12.524 +03:00 [INF] (ReqId: 0HNDKNMMI9PDN:0000000B, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RegisterCommand
+2025-06-26 17:30:22.438 +03:00 [INF] (ReqId: 0HNDKNMMI9PDN:0000000B, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RegisterCommand
+2025-06-26 17:33:48.855 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 17:34:11.075 +03:00 [INF] (ReqId: 0HNDKNPRTS075:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RegisterCommand
+2025-06-26 17:34:21.321 +03:00 [INF] (ReqId: 0HNDKNPRTS075:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RegisterCommand
+2025-06-26 17:36:32.386 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 17:37:53.764 +03:00 [INF] (ReqId: 0HNDKNRCVFVTC:0000000B, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 9) Processing RegisterCommand
+2025-06-26 17:38:03.433 +03:00 [INF] (ReqId: 0HNDKNRCVFVTC:0000000B, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 9) Processing RegisterCommand
+2025-06-26 17:39:27.043 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 17:39:48.856 +03:00 [INF] (ReqId: 0HNDKNT15AFNU:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RegisterCommand
+2025-06-26 17:39:59.164 +03:00 [INF] (ReqId: 0HNDKNT15AFNU:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RegisterCommand
+2025-06-26 17:40:30.545 +03:00 [INF] (ReqId: 0HNDKNT15AFNU:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Information: Acount Created Successfully
+2025-06-26 17:49:56.028 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 18:02:56.443 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 18:03:30.870 +03:00 [INF] (ReqId: 0HNDKOA507E16:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RegisterCommand
+2025-06-26 18:03:30.885 +03:00 [INF] (ReqId: 0HNDKOA507E16:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RegisterCommand
+2025-06-26 18:03:36.872 +03:00 [INF] (ReqId: 0HNDKOA507E16:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Information: Acount Created Successfully
+2025-06-26 18:07:52.065 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 18:13:53.527 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 18:23:04.906 +03:00 [INF] (ReqId: 0HNDKOG8RMETS:0000000B, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 49) Processing LoginQuery
+2025-06-26 18:23:04.932 +03:00 [INF] (ReqId: 0HNDKOG8RMETS:0000000B, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 49) Processing LoginQuery
+2025-06-26 18:23:46.466 +03:00 [INF] (ReqId: 0HNDKOG8RMETS:0000000B, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Information: User logged in successfully
+2025-06-26 18:25:06.134 +03:00 [INF] (ReqId: 0HNDKOG8RMETS:0000000D, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RefereshTokenQuery
+2025-06-26 18:25:06.144 +03:00 [INF] (ReqId: 0HNDKOG8RMETS:0000000D, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing RefereshTokenQuery
+2025-06-26 18:25:06.853 +03:00 [INF] (ReqId: 0HNDKOG8RMETS:0000000D, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 48) Information: Refresh token generated successfully
+2025-06-26 19:09:17.424 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 19:10:46.770 +03:00 [INF] (ReqId: 0HNDKPF7AA0V9:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 45) Processing CreateBankAccountCommand
+2025-06-26 19:15:33.278 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 19:16:03.873 +03:00 [INF] (ReqId: 0HNDKPINBSVVC:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 9) Processing CreateBankAccountCommand
+2025-06-26 19:17:14.823 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 19:17:33.140 +03:00 [INF] (ReqId: 0HNDKPJM4SGI1:00000001, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 9) Processing CreateBankAccountCommand
+2025-06-26 19:20:47.492 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 19:21:11.598 +03:00 [INF] (ReqId: 0HNDKPLL6EUCV:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 13) Processing CreateBankAccountCommand
+2025-06-26 19:24:57.183 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 19:25:24.283 +03:00 [INF] (ReqId: 0HNDKPNVELBC9:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 13) Processing CreateBankAccountCommand
+2025-06-26 19:37:44.443 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 19:38:09.572 +03:00 [INF] (ReqId: 0HNDKPV49B324:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 8) Processing CreateBankAccountCommand
+2025-06-26 19:44:54.262 +03:00 [INF] (ReqId: 0HNDKPV49B324:00000009, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 50) Processing GetBankAcountQuery
+2025-06-26 19:48:51.548 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 19:49:23.485 +03:00 [INF] (ReqId: 0HNDKQ5B3N70I:0000000D, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing GetBankAcountQuery
+2025-06-26 19:50:22.761 +03:00 [INF] (ReqId: 0HNDKQ5B3N70I:0000000F, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 45) Processing DepositCommand
+2025-06-26 19:58:01.440 +03:00 [INF] (ReqId: 0HNDKQ5B3N70I:00000011, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 51) Processing WithdrawCommand
+2025-06-26 20:39:00.435 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 20:39:59.668 +03:00 [INF] (ReqId: 0HNDKR1BRCN7K:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 45) Processing RegisterCommand
+2025-06-26 20:40:08.537 +03:00 [INF] (ReqId: 0HNDKR1BRCN7K:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 45) Processing RegisterCommand
+2025-06-26 20:40:40.509 +03:00 [INF] (ReqId: 0HNDKR1BRCN7K:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 45) Information: Acount Created Successfully
+2025-06-26 20:46:10.739 +03:00 [INF] (ReqId: 0HNDKR1BRCN7K:00000009, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 46) Processing CreateBankAccountCommand
+2025-06-26 20:56:05.655 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 20:58:05.768 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 20:58:28.354 +03:00 [INF] (ReqId: 0HNDKRC1I70V5:00000001, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 10) Processing DeleteBankAcountCommand
+2025-06-26 20:58:35.076 +03:00 [ERR] (ReqId: 0HNDKRC1I70V5:00000001, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 44) Context: RequestType: DeleteBankAcountCommand
+Exception Type: FormatException
+Message: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+
+Stack Trace:    at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at AccountNumberEncryptor.Decrypt(String cipherText) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Encryption\Service\AccountNumberEncryptor.cs:line 49
+   at Infrastructure.BankAcountsMangement.Reposatory.Service.BankAcountReposatory.GetByIdAsync(Guid id) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Reposatory\Service\BankAcountReposatory.cs:line 86
+   at Infrastructure.BankAcountsMangement.Reposatory.Service.BankAcountReposatory.DeleteAsync(Guid id) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Reposatory\Service\BankAcountReposatory.cs:line 71
+   at Infrastructure.BankAcountsMangement.Handulers.DeleteBankAccountHandler.Handle(DeleteBankAcountCommand request, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Handlers\DeleteBankAccountHandler.cs:line 31
+   at Infrastructure.MediatR.Behavairs.ExeptionBehavairs.ExceptionHandlingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\Behavairs\ExeptionBehavairs\ExceptionHandlingBehavior.cs:line 29
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at AccountNumberEncryptor.Decrypt(String cipherText) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Encryption\Service\AccountNumberEncryptor.cs:line 49
+   at Infrastructure.BankAcountsMangement.Reposatory.Service.BankAcountReposatory.GetByIdAsync(Guid id) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Reposatory\Service\BankAcountReposatory.cs:line 86
+   at Infrastructure.BankAcountsMangement.Reposatory.Service.BankAcountReposatory.DeleteAsync(Guid id) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Reposatory\Service\BankAcountReposatory.cs:line 71
+   at Infrastructure.BankAcountsMangement.Handulers.DeleteBankAccountHandler.Handle(DeleteBankAcountCommand request, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Handlers\DeleteBankAccountHandler.cs:line 31
+   at Infrastructure.MediatR.Behavairs.ExeptionBehavairs.ExceptionHandlingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\Behavairs\ExeptionBehavairs\ExceptionHandlingBehavior.cs:line 29
+2025-06-26 21:00:12.718 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 21:00:23.330 +03:00 [INF] (ReqId: 0HNDKRD73JTP2:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 9) Processing DeleteBankAcountCommand
+2025-06-26 21:01:14.037 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 21:01:28.156 +03:00 [INF] (ReqId: 0HNDKRDP41E14:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing DeleteBankAcountCommand
+2025-06-26 21:01:35.380 +03:00 [ERR] (ReqId: 0HNDKRDP41E14:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 8) Context: RequestType: DeleteBankAcountCommand
+Exception Type: FormatException
+Message: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+
+Stack Trace:    at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at AccountNumberEncryptor.Decrypt(String cipherText) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Encryption\Service\AccountNumberEncryptor.cs:line 49
+   at Infrastructure.BankAcountsMangement.Reposatory.Service.BankAcountReposatory.GetByIdAsync(Guid id) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Reposatory\Service\BankAcountReposatory.cs:line 86
+   at Infrastructure.BankAcountsMangement.Reposatory.Service.BankAcountReposatory.DeleteAsync(Guid id) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Reposatory\Service\BankAcountReposatory.cs:line 71
+   at Infrastructure.BankAcountsMangement.Handulers.DeleteBankAccountHandler.Handle(DeleteBankAcountCommand request, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Handlers\DeleteBankAccountHandler.cs:line 31
+   at Infrastructure.MediatR.Behavairs.ExeptionBehavairs.ExceptionHandlingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\Behavairs\ExeptionBehavairs\ExceptionHandlingBehavior.cs:line 29
+System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters.
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at AccountNumberEncryptor.Decrypt(String cipherText) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Encryption\Service\AccountNumberEncryptor.cs:line 49
+   at Infrastructure.BankAcountsMangement.Reposatory.Service.BankAcountReposatory.GetByIdAsync(Guid id) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Reposatory\Service\BankAcountReposatory.cs:line 86
+   at Infrastructure.BankAcountsMangement.Reposatory.Service.BankAcountReposatory.DeleteAsync(Guid id) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Reposatory\Service\BankAcountReposatory.cs:line 71
+   at Infrastructure.BankAcountsMangement.Handulers.DeleteBankAccountHandler.Handle(DeleteBankAcountCommand request, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\BankAcountsMangement\Handlers\DeleteBankAccountHandler.cs:line 31
+   at Infrastructure.MediatR.Behavairs.ExeptionBehavairs.ExceptionHandlingBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\my projects\FinBankDMO\Infrastructure\Behavairs\ExeptionBehavairs\ExceptionHandlingBehavior.cs:line 29
+2025-06-26 21:02:01.869 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 21:02:42.069 +03:00 [INF] (ReqId: 0HNDKRE7J5N93:00000001, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing DeleteBankAcountCommand
+2025-06-26 21:07:25.561 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 21:08:06.407 +03:00 [INF] (ReqId: 0HNDKRH84JJQF:00000001, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 10) Processing DeleteBankAcountCommand
+2025-06-26 21:11:47.396 +03:00 [INF] (ReqId: 0HNDKRH84JJQG:00000001, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 49) Processing CreateBankAccountCommand
+2025-06-26 21:12:17.370 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 21:12:50.377 +03:00 [INF] (ReqId: 0HNDKRJV2JMJB:00000001, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 13) Processing CreateBankAccountCommand
+2025-06-26 22:04:42.194 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 22:05:38.921 +03:00 [INF] (ReqId: 0HNDKSH88BQK0:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 8) Processing CreateBankAccountCommand
+2025-06-26 22:23:13.646 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 22:23:59.971 +03:00 [INF] (ReqId: 0HNDKSRJFUDQF:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 8) Processing CreateBankAccountCommand
+2025-06-26 22:25:37.072 +03:00 [INF] (ReqId: 0HNDKSRJFUDQF:00000009, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 8) Processing CreateBankAccountCommand
+2025-06-26 22:27:01.873 +03:00 [INF] (ReqId: 0HNDKSRJFUDQF:0000000B, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 48) Processing GetBankAcountQuery
+2025-06-26 22:28:55.844 +03:00 [INF] (ReqId: 0HNDKSRJFUDQF:0000000D, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 3) Processing TransferCommand
+2025-06-26 22:39:34.274 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 22:43:28.541 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 22:44:03.074 +03:00 [INF] (ReqId: 0HNDKT6T9AG3I:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 43) Processing GetAllLogsQuery
+2025-06-26 22:47:15.756 +03:00 [INF] (ReqId: 0HNDKT6T9AG3I:00000009, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 8) Processing CreateInterestRuleCommand
+2025-06-26 22:55:33.566 +03:00 [INF] (ReqId: , User: |, Role: , Machine: DESKTOP-8LB2CPO, Thread: 1) Logger initialized in Development environment
+2025-06-26 22:56:14.144 +03:00 [INF] (ReqId: 0HNDKTDLSO7R1:00000007, User: Anonymous|Anonymous, Role: None, Machine: DESKTOP-8LB2CPO, Thread: 5) Processing GetAllScheduledInterestQuery

@@ -76,7 +76,7 @@ sequenceDiagram
     end
 ```
 ###🛡️ Exception Handling Flow
-
+```
 graph TD
     A[Request] --> B{Middleware}
     B -->|Exception| C[Log with Serilog]
@@ -90,7 +90,7 @@ graph TD
     I[MediatR] --> J{Behavior}
     J -->|Validation| K[Return 400]
     J -->|Other| B
-    
+  ```  
 ###💾 Caching Mechanism
 
 flowchart LR

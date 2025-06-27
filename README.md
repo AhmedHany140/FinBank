@@ -72,3 +72,36 @@ sequenceDiagram
         Filters->>Filters: Cache Response (if GET)
         Filters-->>Client: Return Fresh Data
     end
+
+##🏗️ Architectural Layers
+
+flowchart TD
+    A[Client] --> B[API Gateway]
+    B --> C[Presentation Layer]
+    C -->|Filters| D[Business Logic Layer]
+    D -->|MediatR| E[Data Access Layer]
+    E --> F[Database]
+    
+    subgraph Presentation
+        C[Controllers]
+        C1[Middleware]
+        C2[Filters]
+    end
+    
+    subgraph Business
+        D[Use Cases]
+        D1[Domain Models]
+        D2[Services]
+    end
+    
+    subgraph Data
+        E[Repositories]
+        E1[Unit of Work]
+        E2[EF Core]
+    end
+    
+    subgraph Infrastructure
+        F1[Hangfire]
+        F2[Serilog]
+        F3[AutoMapper]
+    end

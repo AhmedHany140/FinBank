@@ -76,7 +76,7 @@ sequenceDiagram
     end
 ```
 ###🛡️ Exception Handling Flow
-```
+```mermaid
 graph TD
     A[Request] --> B{Middleware}
     B -->|Exception| C[Log with Serilog]
@@ -93,6 +93,7 @@ graph TD
   ```  
 ###💾 Caching Mechanism
 
+```mermaid
 flowchart LR
     A[Incoming Request] --> B{GET Request?}
     B -->|Yes| C[Generate Cache Key]
@@ -104,14 +105,16 @@ flowchart LR
     B -->|No| I[Process Normally]
 
 ###📊 Performance Metrics
+```
 
+```mermaid
 pie
     title Request Handling Time Distribution
     "Cached Responses" : 45
     "Database Queries" : 30
     "Business Logic" : 15
     "Validation" : 10
-
+```
 
     
     
